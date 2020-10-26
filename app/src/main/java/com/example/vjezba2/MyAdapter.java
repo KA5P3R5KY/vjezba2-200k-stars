@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -24,6 +26,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             imageView1 = v.findViewById(R.id.imageView1);
             textView1 = v.findViewById(R.id.textView1);
             textView2 = v.findViewById(R.id.textView2);
+
         }
     }
 
@@ -43,6 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.imageView1.setImageResource(R.drawable.avatar1);
         holder.textView1.setText(mDataset.get(position).repoName);
         holder.textView2.setText(mDataset.get(position).starCount);
     }
