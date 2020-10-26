@@ -26,11 +26,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         ImageView imageView = new ImageView(this);
-        imageView.setImageResource(R.drawable.avatar1);
+        //imageView.setImageResource(R.drawable.avatar1);
         ImageView imageView2 = new ImageView(this);
         imageView2.setImageResource(R.drawable.avatar2);
         ImageView imageView3 = new ImageView(this);
         imageView3.setImageResource(R.drawable.avatar3);
+
+        Glide.with(this)
+                .load("https://image.tmdb.org/t/p/w92/dRLSoufWtc16F5fliK4ECIVs56p.jpg") // image url
+                .into(imageView);  // imageview object
 
         MyData myDataset1 = new MyData(imageView, "Repo1", "250000");
         MyData myDataset2 = new MyData(imageView2, "Repo2", "350000");

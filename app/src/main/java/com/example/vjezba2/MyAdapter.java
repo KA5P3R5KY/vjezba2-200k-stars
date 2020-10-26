@@ -46,7 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.imageView1.setImageResource(R.drawable.avatar1);
+        holder.imageView1.setImageResource();
         holder.textView1.setText(mDataset.get(position).repoName);
         holder.textView2.setText(mDataset.get(position).starCount);
     }
