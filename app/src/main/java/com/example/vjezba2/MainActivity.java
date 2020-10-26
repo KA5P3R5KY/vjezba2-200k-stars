@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         imageView3.setImageResource(R.drawable.avatar3);
 
         Glide.with(this)
-                .load("https://image.tmdb.org/t/p/w92/dRLSoufWtc16F5fliK4ECIVs56p.jpg") // image url
+                .load("https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/prison-mike-zapista-ou.jpg") // image url
                 .into(imageView);  // imageview object
 
         MyData myDataset1 = new MyData(imageView, "Repo1", "250000");

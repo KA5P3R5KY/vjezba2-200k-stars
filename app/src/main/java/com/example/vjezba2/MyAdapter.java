@@ -46,7 +46,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.imageView1.setImageResource();
+        String uri = "https://avatars1.githubusercontent.com/u/47313528?s=88&v=4";
+        Glide.with(holder.itemView.getContext()).load(uri).into(holder.imageView1);
         holder.textView1.setText(mDataset.get(position).repoName);
         holder.textView2.setText(mDataset.get(position).starCount);
     }
@@ -55,4 +56,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return mDataset.size();
     }
+
+
 }
