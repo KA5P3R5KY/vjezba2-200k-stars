@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GithubApi githubApi;
     final ArrayList<MyData> myDataset = new ArrayList<MyData>();
+    private RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         final RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        final RecyclerView.Adapter adapter = new MyAdapter(myDataset);
+        adapter = new MyAdapter(myDataset);
         recyclerView.setAdapter(adapter);
 
     }
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                      MyData myDataset1 = new MyData(avatarUrl, repositoryName, stars);
                      myDataset.add(myDataset1);
                 }
+                adapter.notifyDataSetChanged();
             } else {
                 Log.d("repositoriesCallback", "Code: " + response.code() + " Message: " + response.message());
             }
