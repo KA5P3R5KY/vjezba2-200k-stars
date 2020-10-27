@@ -48,7 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(holder.itemView.getContext()).load(mDataset.get(position).avatar).into(holder.imageView1);
         holder.textView1.setText(mDataset.get(position).repoName);
-        holder.textView2.setText(mDataset.get(position).starCount);
+        holder.textView2.setText(Integer.toString(mDataset.get(position).starCount));
     }
 
     @Override
