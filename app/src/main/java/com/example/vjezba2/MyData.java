@@ -3,14 +3,14 @@ package com.example.vjezba2;
 import android.widget.ImageView;
 
 public class MyData {
-    public ImageView avatar;
+    public String avatar;
     public String repoName;
-    public String starCount;
+    public Integer starCount;
 
-    public MyData(ImageView img1, String str1, String str2){
-        this.avatar = img1;
-        this.repoName = str1;
-        this.starCount = str2;
+    public MyData(String str1, String str2, Integer int1){
+        this.avatar = str1;
+        this.repoName = str2;
+        this.starCount = int1;
     }
 
 }
